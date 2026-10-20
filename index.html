@@ -1,1 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephanie's Senior Yr Portfolio</title>
+    <link rel="icon" href="Cat0425.png" type="image/png">
 
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+
+      *{
+        margin:0;
+        padding:0;
+        box-sizing:border-box;
+        scroll-behavior:smooth;
+      }
+
+      /* BODY */
+      body{
+        font-family:'Poppins', sans-serif;
+        background: linear-gradient(-45deg, #e9d5ff, #f5e6ff, #d8b4fe, #e9d5ff);
+        background-size: 400% 400%;
+        animation: gradientBG 12s ease infinite;
+        color:#333;
+        line-height:1.6;
+      }
+
+      @keyframes gradientBG{
+        0%{background-position:0% 50%;}
+        50%{background-position:100% 50%;}
+        100%{background-position:0% 50%;}
+      }
+
+      /* NAVBAR */
+      nav{
+        background:rgba(181, 126, 220, 0.9);
+        padding:25px;
+        position:sticky;
+        top:0;
+        z-index:1000;
+        backdrop-filter: blur(10px);
+        box-shadow:0 4px 20px rgba(0,0,0,0.1);
+        animation: slideDown 0.8s ease;
+      }
+
+      @keyframes slideDown{
+        from{transform:translateY(-100%); opacity:0;}
+        to{transform:translateY(0); opacity:1;}
+      }
+
+      nav ul{
+        display:flex;
+        justify-content:center;
+        list-style:none;
+        gap:30px;
+      }
+
+      nav a{
+        color:white;
+        text-decoration:none;
+        font-weight:600;
+        transition:0.3s;
+        position:relative;
+      }
+
+      nav a::after{
+        content:"";
+        position:absolute;
+        width:0%;
+        height:2px;
+        background:white;
+        left:0;
+        bottom:-5px;
+        transition:0.3s;
+      }
+
+      nav a:hover{
+        color:#ffe4fa;
+        transform:scale(1.05);
+      }
+
+      nav a:hover::after{
+        width:100%;
+      }
+
+      /* HERO */
+      .hero{
+        text-align:center;
+        padding:0px 0px 21px 0px;
+        background:linear-gradient(to right, #c084fc, #e9d5ff);
+        animation: fadeIn 1.2s ease;
+      }
+
+      @keyframes fadeIn{
+        from{opacity:0;}
+        to{opacity:1;}
+      }
+
+      .hero h1{
+        font-size:2.5rem;
+        margin-bottom:10px;
+        color:white;
+        animation: pop 1s ease;
+      }
+
+      @keyframes pop{
+        0%{transform:scale(0.8); opacity:0;}
+        100%{transform:scale(1); opacity:1;}
+      }
+
+      .divider{
+        margin:20px 0;
+        font-weight:bold;
+        color:white;
+      }
+
+      .hero img{
+        width:220px;
+        height:220px;
+        object-fit:cover;
+        border-radius:50%;
+        display:block;
+        margin:20px auto;
+        border:5px solid white;
+        box-shadow:0 8px 20px rgba(0,0,0,0.3);
+        transition:0.4s;
+      }
+
+      .hero img:hover{
+        transform:scale(1.05) rotate(2deg);
+      }
+
+      /* SECTIONS */
+      section{
+        padding:100px 20px 60px 20px;
+        max-width:1100px;
+        margin:auto;
+        animation: fadeUp 1s ease;
+      }
+
+      @keyframes fadeUp{
+        from{opacity:0; transform:translateY(30px);}
+        to{opacity:1; transform:translateY(0);}
+      }
+
+      h2{
+        text-align:center;
+        margin-bottom:25px;
+        color:#6b21a8;
+        position:relative;
+      }
+
+      h2::after{
+        content:"";
+        display:block;
+        width:60px;
+        height:3px;
+        background:#b57edc;
+        margin:10px auto 0;
+        border-radius:5px;
+      }
+
+      /* ABOUT */
+      .about-content{
+        text-align:center;
+      }
+
+      .selfpic{
+        width:220px;
+        height:220px;
+        object-fit:cover;
+        border-radius:50%;
+        margin-top:20px;
+        border:5px solid white;
+        box-shadow:0 8px 20px rgba(0,0,0,0.3);
+        transition:0.4s;
+      }
+
+      .selfpic:hover{
+        transform:scale(1.05);
+      }
+
+      /* PROJECTS */
+      .project-grid{
+        display:grid;
+        grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+        gap:25px;
+      }
+
+      .project{
+        background:white;
+        padding:20px;
+        border-radius:15px;
+        box-shadow:0 6px 15px rgba(0,0,0,0.1);
+        transition:0.4s;
+        text-align:center;
+        position:relative;
+        overflow:hidden;
+      }
+
+      .project::before{
+        content:"";
+        position:absolute;
+        top:0;
+        left:-100%;
+        width:100%;
+        height:100%;
+        background:linear-gradient(120deg, transparent, rgba(181,126,220,0.2), transparent);
+        transition:0.5s;
+      }
+
+      .project:hover::before{
+        left:100%;
+      }
+
+      .project:hover{
+        transform:translateY(-10px) scale(1.02);
+        box-shadow:0 10px 25px rgba(0,0,0,0.2);
+      }
+
+      .project img{
+        width:100%;
+        border-radius:10px;
+        margin:15px 0;
+        transition:0.3s;
+      }
+
+      .project img:hover{
+        transform:scale(1.03);
+      }
+
+      .project a{
+        text-decoration:none;
+        color:#eb94db;
+        font-weight:bold;
+        transition:0.3s;
+      }
+
+      .project a:hover{
+        color:#6b21a8;
+      }
+
+      /* RESOURCES */
+      .resources ul{
+        list-style:none;
+        text-align:center;
+      }
+
+      .resources li{
+        margin:10px 0;
+      }
+
+      .resources a{
+        color:#9333ea;
+        text-decoration:none;
+        font-weight:bold;
+        transition:0.3s;
+      }
+
+      .resources a:hover{
+        color:#6b21a8;
+        text-decoration:underline;
+      }
+
+      /* CONTACT */
+      #contact{
+        text-align:center;
+      }
+
+      /* FOOTER */
+      footer{
+        background:#b57edc;
+        color:white;
+        text-align:center;
+        padding:20px;
+        margin-top:40px;
+        animation: fadeIn 2s ease;
+      }
+
+      /* MOBILE */
+      @media(max-width:768px){
+
+        nav ul{
+          flex-direction:column;
+          gap:10px;
+          text-align:center;
+        }
+
+        .hero h1{
+          font-size:2rem;
+        }
+
+        .hero img,
+        .selfpic{
+          width:170px;
+          height:170px;
+        }
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <!-- NAVIGATION -->
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#resources">Resources</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <h1>Welcome To My Junior Year Portfolio!</h1>
+      <p class="divider">● ○ ● ○ Stephanie Veliz ○ ● ○ ●</p>
+      <img src="Selfie.png" alt="Portfolio Logo">
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-content">
+        <p>
+          My name is <strong>Stephanie Veliz</strong>, I am in 11th grade.
+          I enjoy learning new coding skills i am looking forward to continue learning more about HTML, CSS, and Python.
+        </p>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <h2>My CFU Projects</h2>
+
+      <div class="project-grid">
+
+        <!-- ALL YOUR CFUs ARE KEPT EXACTLY -->
+
+        <!-- CFU 1 -->
+        <div class="project">
+          <h3><a href="https://py3.codeskulptor.org/#user311_YeQYr9I6BS_0.py" target="_blank">CFU 1</a></h3>
+          <a href="https://py3.codeskulptor.org/#user311_YeQYr9I6BS_0.py" target="_blank">
+            <img src="Screenshot 2026-05-27 230418.png" alt="CFU 1">
+          </a>
+          <p>This is the first CFU assignment where i began to explored how Python works.</p>
+        </div>
+
+        <!-- CFU 2 -->
+        <div class="project">
+          <h3><a href="https://py3.codeskulptor.org/#user311_YeQYr9I6BS_1.py" target="_blank">CFU 2</a></h3>
+          <a href="https://py3.codeskulptor.org/#user311_YeQYr9I6BS_1.py" target="_blank">
+            <img src="Screenshot 2026-05-27 231524.png" alt="CFU 2">
+          </a>
+          <p>I got to create a ASCII art cat with using python, this was a pretty easy assignment!</p>
+        </div>
+
+        <!-- CFU 3 -->
+        <div class="project">
+          <h3><a href="https://py3.codeskulptor.org/#user311_uU2rSNclPM_0.py" target="_blank">CFU 3</a></h3>
+          <a href="https://py3.codeskulptor.org/#user311_uU2rSNclPM_0.py" target="_blank">
+            <img src="Screenshot 2026-05-27 233625.png" alt="CFU 3">
+          </a>
+          <p>This project helped me practice coding and problem-solving skills.</p>
+        </div>
+
+        <!-- CFU 4 -->
+        <div class="project">
+          <h3><a href="https://py3.codeskulptor.org/#user311_BzSefXgZob_0.py" target="_blank">CFU 4</a></h3>
+          <a href="https://py3.codeskulptor.org/#user311_BzSefXgZob_0.py" target="_blank">
+            <img src="Screenshot 2026-05-27 234914.png" alt="CFU 4">
+          </a>
+          <p>I learned more advanced coding techniques during this project.</p>
+        </div>
+
+        <!-- CFU 5 -->
+        <div class="project">
+          <h3><a href="https://py3.codeskulptor.org/#user311_hxyXGFJ8re_0.py" target="_blank">CFU 5</a></h3>
+          <a href="https://py3.codeskulptor.org/#user311_hxyXGFJ8re_0.py" target="_blank">
+            <img src="Screenshot 2026-05-27 235848.png" alt="CFU 5">
+          </a>
+          <p>This project improved my understanding of Python and creativity</p>
+        </div>
+
+        <!-- CFU 6 -->
+        <div class="project">
+          <h3><a href="https://py3.codeskulptor.org/#user311_1nAsQ6rhl3_0.py" target="_blank">CFU 6</a></h3>
+          <a href="https://py3.codeskulptor.org/#user311_1nAsQ6rhl3_0.py" target="_blank">
+            <img src="Screenshot 2026-05-28 000307.png" alt="CFU 6">
+          </a>
+          <p>I continued developing my coding confidence and design skills.</p>
+        </div>
+
+        <!-- CFU 7 -->
+        <div class="project">
+          <h3><a href="https://py3.codeskulptor.org/#user311_JuLPb1pVSj_1.py" target="_blank">CFU 7</a></h3>
+          <a href="https://py3.codeskulptor.org/#user311_JuLPb1pVSj_1.py" target="_blank">
+            <img src="Screenshot 2026-05-28 000722.png" alt="CFU 7">
+          </a>
+          <p>This project allowed me to experiment with new coding ideas.</p>
+        </div>
+
+        <!-- CFU 8 -->
+        <div class="project">
+          <h3><a href="https://py3.codeskulptor.org/#user311_hzuATtGf4S_0.py" target="_blank">CFU 8</a></h3>
+          <a href="https://py3.codeskulptor.org/#user311_hzuATtGf4S_0.py" target="_blank">
+            <img src="Screenshot 2026-05-28 001153.png" alt="CFU 8">
+          </a>
+          <p>I learned how to use problem-solving and creativity during this assignment</p>
+        </div>
+
+        <!-- CFU 9 -->
+        <div class="project">
+          <h3><a href="https://py3.codeskulptor.org/#user311_jC9yTeX8Ek_0.py" target="_blank">CFU 9</a></h3>
+          <a href="https://py3.codeskulptor.org/#user311_jC9yTeX8Ek_0.py" target="_blank">
+            <img src="Screenshot 2026-05-28 003543.png" alt="CFU 9">
+          </a>
+          <p>This project strengthened my coding and debugging skills.</p>
+        </div>
+
+        <!-- CFU 10 -->
+        <div class="project">
+          <h3><a href="https://py3.codeskulptor.org/#user311_5lc8fm9hZ4_1.py" target="_blank">CFU 10</a></h3>
+          <a href="https://py3.codeskulptor.org/#user311_5lc8fm9hZ4_1.py" target="_blank">
+            <img src="Screenshot 2026-05-28 003944.png" alt="CFU 10">
+          </a>
+          <p>This was one of the projects i found very confusing and both intriguing it was pretty silly.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section class="resources" id="resources">
+      <h2>Resources Used</h2>
+      <ul>
+        <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
+        <li><a href="https://py3.codeskulptor.org/" target="_blank">CodeSkulptor</a></li>
+        <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+        <li><a href="https://code.org/" target="_blank">Code.org</a></li>
+      </ul>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: <strong>Stephaniev164@nycstudents.net</strong></p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+       © Stephanie Veliz | Junior Year Portfolio 
+    </footer>
+
+  </body>
+</html>

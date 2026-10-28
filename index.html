@@ -18,14 +18,14 @@
         scroll-behavior:smooth;
       }
 
-      /* BODY */
+      /* BODY BackGround */
       body{
         font-family:'Poppins', sans-serif;
-        background: linear-gradient(-45deg, #e9d5ff, #f5e6ff, #d8b4fe, #e9d5ff);
-        background-size: 400% 400%;
-        animation: gradientBG 12s ease infinite;
-        color:#333;
+        background: linear-gradient(-45deg, #e9d5ff, #b8f1f3, #e6feff, #e9d5ff);
+        background-size: 100% 10%;
+        color:#ffffff;
         line-height:1.6;
+        background-image: url(MusicalBackground.png)
       }
 
       @keyframes gradientBG{
@@ -36,14 +36,15 @@
 
       /* NAVBAR */
       nav{
-        background:rgba(181, 126, 220, 0.9);
-        padding:25px;
+        background:#ffffff;
+        padding:15px;
         position:sticky;
         top:0;
         z-index:1000;
         backdrop-filter: blur(10px);
-        box-shadow:0 4px 20px rgba(0,0,0,0.1);
+        box-shadow:0 10px 20px rgba(0,0,0,0.1);
         animation: slideDown 0.8s ease;
+        background-image: url("PianoTile.png");
       }
 
       @keyframes slideDown{
@@ -58,12 +59,23 @@
         gap:30px;
       }
 
+      /* Home, About me, Projects, Resources, Contact Buttons*/
       nav a{
-        color:white;
+        background: rgba(255, 244, 234, 0.81);
+        color:#ffffff;
         text-decoration:none;
         font-weight:600;
         transition:0.3s;
         position:relative;
+        background:rgba(178, 163, 147, 0.84);
+        padding:10px;
+        border-radius:15px;
+        box-shadow:0 6px 15px rgba(0,0,0,0.1);
+        transition:0.4s;
+        text-align:center;
+        position:relative;
+        overflow:hidden;
+
       }
 
       nav a::after{
@@ -78,7 +90,7 @@
       }
 
       nav a:hover{
-        color:#ffe4fa;
+        color:#c48f5a;
         transform:scale(1.05);
       }
 
@@ -89,8 +101,7 @@
       /* HERO */
       .hero{
         text-align:center;
-        padding:0px 0px 21px 0px;
-        background:linear-gradient(to right, #c084fc, #e9d5ff);
+        padding:0 0 0.0px 0;
         animation: fadeIn 1.2s ease;
       }
 
@@ -102,7 +113,7 @@
       .hero h1{
         font-size:2.5rem;
         margin-bottom:10px;
-        color:white;
+        color:#ffffff;
         animation: pop 1s ease;
       }
 
@@ -112,19 +123,19 @@
       }
 
       .divider{
-        margin:20px 0;
+        margin:1px 0;
         font-weight:bold;
-        color:white;
+        color:#ffffff;
       }
 
       .hero img{
-        width:220px;
-        height:220px;
+        width:300px;
+        height:300px;
         object-fit:cover;
         border-radius:50%;
         display:block;
         margin:20px auto;
-        border:5px solid white;
+        border:5px solid #ffffff;
         box-shadow:0 8px 20px rgba(0,0,0,0.3);
         transition:0.4s;
       }
@@ -135,8 +146,8 @@
 
       /* SECTIONS */
       section{
-        padding:100px 20px 60px 20px;
-        max-width:1100px;
+        padding:200px 50px 100px 20px;
+        max-width:2000px;
         margin:auto;
         animation: fadeUp 1s ease;
       }
@@ -149,7 +160,7 @@
       h2{
         text-align:center;
         margin-bottom:25px;
-        color:#6b21a8;
+        color:#c4a287;
         position:relative;
       }
 
@@ -158,7 +169,7 @@
         display:block;
         width:60px;
         height:3px;
-        background:#b57edc;
+        background:#d0c8c0;
         margin:10px auto 0;
         border-radius:5px;
       }
@@ -166,6 +177,14 @@
       /* ABOUT */
       .about-content{
         text-align:center;
+        background:rgba(193, 180, 167, 0.75);
+        padding:10px;
+        border-radius:25px;
+        box-shadow:0 6px 15px rgba(0,0,0,0.1);
+        transition:0.4s;
+        text-align:center;
+        position:relative;
+        overflow:hidden;
       }
 
       .selfpic{
@@ -177,6 +196,7 @@
         border:5px solid white;
         box-shadow:0 8px 20px rgba(0,0,0,0.3);
         transition:0.4s;
+
       }
 
       .selfpic:hover{
@@ -191,7 +211,7 @@
       }
 
       .project{
-        background:white;
+        background:rgba(226, 207, 184, 0.56);
         padding:20px;
         border-radius:15px;
         box-shadow:0 6px 15px rgba(0,0,0,0.1);
@@ -208,7 +228,7 @@
         left:-100%;
         width:100%;
         height:100%;
-        background:linear-gradient(120deg, transparent, rgba(181,126,220,0.2), transparent);
+        background:linear-gradient(120deg, transparent, #e2cfb8, transparent);
         transition:0.5s;
       }
 
@@ -234,51 +254,90 @@
 
       .project a{
         text-decoration:none;
-        color:#eb94db;
+        color:#4b4742;
         font-weight:bold;
         transition:0.3s;
       }
 
       .project a:hover{
-        color:#6b21a8;
+        color:#ffffff;
       }
 
       /* RESOURCES */
       .resources ul{
         list-style:none;
         text-align:center;
+        background:rgb(193, 180, 167, 0.75);
+        padding:10px;
+        border-radius:25px;
+        box-shadow:0 6px 15px rgba(0,0,0,0.1);
+        transition:0.4s;
+        text-align:center;
+        position:relative;
+        overflow:hidden;
+
       }
 
       .resources li{
         margin:10px 0;
+
       }
 
       .resources a{
-        color:#9333ea;
+        color:rgba(255, 255, 255, 0.78);
         text-decoration:none;
         font-weight:bold;
         transition:0.3s;
       }
 
       .resources a:hover{
-        color:#6b21a8;
+        color:#fca75c;
         text-decoration:underline;
       }
 
       /* CONTACT */
-      #contact{
+      .contact ul{
+        list-style:none;
         text-align:center;
+        background:rgba(193, 180, 167, 0.75);
+        padding:10px;
+        border-radius:25px;
+        box-shadow:0 6px 15px rgba(0,0,0,0.1);
+        transition:0.4s;
+        text-align:center;
+        position:relative;
+        overflow:hidden;
+
+      }
+
+      .contact li{
+        margin:10px 0;
+
+      }
+
+      .contact a{
+        color:#ddbc98;
+        text-decoration:none;
+        font-weight:bold;
+        transition:0.3s;
+      }
+
+      .contact a:hover{
+        color:#ffffff;
+        text-decoration:underline;
       }
 
       /* FOOTER */
       footer{
-        background:#b57edc;
-        color:white;
+        background:#ffffff;
+        color:#9c8e83;
         text-align:center;
         padding:20px;
         margin-top:40px;
         animation: fadeIn 2s ease;
+        background-image: url(PianoTile.png)
       }
+
 
       /* MOBILE */
       @media(max-width:768px){
@@ -318,25 +377,25 @@
 
     <!-- HERO -->
     <section class="hero" id="home">
-      <h1>Welcome To My Senior Year Portfolio!</h1>
-      <p class="divider">● ○ ● ○ Stephanie Veliz ○ ● ○ ●</p>
-      <img src="Selfie.png" alt="Portfolio Logo">
+      <p class="divider">● ○ ● ○ ⋆ ˚｡⋆୨♡୧⋆ ˚｡⋆  ⋆ ˚｡⋆୨♡୧⋆ ˚｡⋆○ ● ○ ●</p>
+      <h1>𝚆𝚎𝚕𝚌𝚘𝚖𝚎 𝚃𝚘 𝙼𝚢 𝚂𝚎𝚗𝚒𝚘𝚛 𝚈𝚎𝚊𝚛 𝙿𝚘𝚛𝚝𝚏𝚘𝚕𝚒𝚘!</h1>
+      <img src="stinkygoobert.png" alt="Portfolio Logo">
+      <p class="divider">● ○ ● ○ ⋆ ˚｡⋆୨♡୧⋆ ˚｡⋆  ⋆ ˚｡⋆୨♡୧⋆ ˚｡⋆○ ● ○ ●</p>
     </section>
+
 
     <!-- ABOUT -->
     <section id="about">
       <h2>About Me</h2>
       <div class="about-content">
         <p>
-          My name is <strong>Stephanie Veliz</strong>, I am in 11th grade.
-          I enjoy learning new coding skills i am looking forward to continue learning more about HTML, CSS, and Python.
-        </p>
+          My name is <strong>Stephanie Veliz</strong>, I am in my last year of Thomas A. Edison CTE High School, I am looking forward to spending my last year having fun in Web & App design. It has been a long journey of developing new skills in <strong> HTML, CSS, Javascript & Figma!</strong>
       </div>
     </section>
 
     <!-- PROJECTS -->
     <section id="projects">
-      <h2>My CFU Projects</h2>
+      <h2>My CFU Projects:</h2>
 
       <div class="project-grid">
 
@@ -346,7 +405,7 @@
         <div class="project">
           <h3><a href="https://py3.codeskulptor.org/#user311_YeQYr9I6BS_0.py" target="_blank">CFU 1</a></h3>
           <a href="https://py3.codeskulptor.org/#user311_YeQYr9I6BS_0.py" target="_blank">
-            <img src="Screenshot 2026-05-27 230418.png" alt="CFU 1">
+            <img src="Screenshot-2026-05-27-230418.png" alt="CFU 1">
           </a>
           <p>This is the first CFU assignment where i began to explored how Python works.</p>
         </div>
@@ -355,7 +414,7 @@
         <div class="project">
           <h3><a href="https://py3.codeskulptor.org/#user311_YeQYr9I6BS_1.py" target="_blank">CFU 2</a></h3>
           <a href="https://py3.codeskulptor.org/#user311_YeQYr9I6BS_1.py" target="_blank">
-            <img src="Screenshot 2026-05-27 231524.png" alt="CFU 2">
+            <img src="Screenshot-2026-05-27-231524.png" alt="CFU 2">
           </a>
           <p>I got to create a ASCII art cat with using python, this was a pretty easy assignment!</p>
         </div>
@@ -364,7 +423,7 @@
         <div class="project">
           <h3><a href="https://py3.codeskulptor.org/#user311_uU2rSNclPM_0.py" target="_blank">CFU 3</a></h3>
           <a href="https://py3.codeskulptor.org/#user311_uU2rSNclPM_0.py" target="_blank">
-            <img src="Screenshot 2026-05-27 233625.png" alt="CFU 3">
+            <img src="Screenshot-2026-05-27-233625.png" alt="CFU 3">
           </a>
           <p>This project helped me practice coding and problem-solving skills.</p>
         </div>
@@ -373,7 +432,7 @@
         <div class="project">
           <h3><a href="https://py3.codeskulptor.org/#user311_BzSefXgZob_0.py" target="_blank">CFU 4</a></h3>
           <a href="https://py3.codeskulptor.org/#user311_BzSefXgZob_0.py" target="_blank">
-            <img src="Screenshot 2026-05-27 234914.png" alt="CFU 4">
+            <img src="Screenshot-2026-05-27-234914.png" alt="CFU 4">
           </a>
           <p>I learned more advanced coding techniques during this project.</p>
         </div>
@@ -382,7 +441,7 @@
         <div class="project">
           <h3><a href="https://py3.codeskulptor.org/#user311_hxyXGFJ8re_0.py" target="_blank">CFU 5</a></h3>
           <a href="https://py3.codeskulptor.org/#user311_hxyXGFJ8re_0.py" target="_blank">
-            <img src="Screenshot 2026-05-27 235848.png" alt="CFU 5">
+            <img src="Screenshot-2026-05-27-235848.png" alt="CFU 5">
           </a>
           <p>This project improved my understanding of Python and creativity</p>
         </div>
@@ -391,7 +450,7 @@
         <div class="project">
           <h3><a href="https://py3.codeskulptor.org/#user311_1nAsQ6rhl3_0.py" target="_blank">CFU 6</a></h3>
           <a href="https://py3.codeskulptor.org/#user311_1nAsQ6rhl3_0.py" target="_blank">
-            <img src="Screenshot 2026-05-28 000307.png" alt="CFU 6">
+            <img src="Screenshot-2026-05-28-000307.png" alt="CFU 6">
           </a>
           <p>I continued developing my coding confidence and design skills.</p>
         </div>
@@ -400,7 +459,7 @@
         <div class="project">
           <h3><a href="https://py3.codeskulptor.org/#user311_JuLPb1pVSj_1.py" target="_blank">CFU 7</a></h3>
           <a href="https://py3.codeskulptor.org/#user311_JuLPb1pVSj_1.py" target="_blank">
-            <img src="Screenshot 2026-05-28 000722.png" alt="CFU 7">
+            <img src="png" alt="CFU 7">
           </a>
           <p>This project allowed me to experiment with new coding ideas.</p>
         </div>
@@ -437,7 +496,7 @@
 
     <!-- RESOURCES -->
     <section class="resources" id="resources">
-      <h2>Resources Used</h2>
+      <h2>Resources:</h2>
       <ul>
         <li><a href="https://www.w3schools.com" target="_blank">W3Schools</a></li>
         <li><a href="https://py3.codeskulptor.org/" target="_blank">CodeSkulptor</a></li>
@@ -447,15 +506,20 @@
     </section>
 
     <!-- CONTACT -->
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Email: <strong>Stephaniev164@nycstudents.net</strong></p>
+    <section class="contact" id="contact">
+      <h2>Contacts:</h2><
+      <ul>
+      <p>Email: <strong>STephaniev164@nycstudents.net</strong></p>
+      <p>Number: <strong>(646)- </strong></p> 
+      <p>Personal Email: <strong> Stephanieveliz32@gmail.com</strong><p>
+      <p> School: <strong>Thomas A. Edison CTE High School</strong></p>
+      </ul>
     </section>
 
-    <!-- FOOTER -->
-    <footer>
-       © Stephanie Veliz | Junior Year Portfolio 
-    </footer>
+  <!-- FOOTER -->
+  <footer>
+    © Stephanie Veliz | Senior Year Portfolio 2026-2027
+  </footer>
 
   </body>
 </html>

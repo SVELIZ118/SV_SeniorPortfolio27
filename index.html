@@ -358,6 +358,67 @@
           height:170px;
         }
       }
+      
+      <style> 
+      /* Reset basic styles */
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #f4f4f9;
+        padding: 20px;
+      }
+
+      /* 1. The Grid Layout */
+      .gallery-container {
+        display: grid;
+        /* Automatically creates columns that are at least 250px wide */
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px; /* Space between the images */
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      /* 2. The Gallery Cards */
+      .gallery-item {
+        background-color: #ffffff;
+        border-radius: 8px;
+        overflow: hidden; /* Keeps the zoomed image inside the border radius */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      /* 3. Image Sizing & Control */
+      .gallery-item img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover; /* Forces images to crop and fill perfectly without stretching */
+        display: block;
+        transition: transform 0.5s ease;
+      }
+
+      /* 4. Text Captions */
+      .caption {
+        padding: 15px;
+        text-align: center;
+        font-family: sans-serif;
+        font-size: 14px;
+        color: #333;
+        font-weight: bold;
+      }
+
+      /* 5. Hover Effects */
+      .gallery-item:hover {
+        transform: translateY(-5px); /* Card lifts up slightly */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      }
+
+      .gallery-item:hover img {
+        transform: scale(1.05); /* Image subtle zoom inside the card */
+      }
 
     </style>
   </head>
@@ -389,9 +450,44 @@
       <h2>About Me</h2>
       <div class="about-content">
         <p>
-          My name is <strong>Stephanie Veliz</strong>, I am in my last year of Thomas A. Edison CTE High School, I am looking forward to spending my last year having fun in Web & App design. It has been a long journey of developing new skills in <strong> HTML, CSS, Javascript & Figma!</strong>
+          My name is <strong>Stephanie Veliz</strong>, I am in my last year of Thomas A. Edison CTE High School, I am looking forward to spending my last year having fun in Web & App design. It has been a long journey of developing new skills in <strong> HTML, CSS, Javascript & Figma!</strong> </section>
+        
+        
+      <!-- The Gallery Container -->
+      <div class="gallery-container">
+
+        <div class="gallery-item">
+          <img src="stinkygoobert.png" alt="Beautiful Landscape">
+          <div class="caption">Landscape View</div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://picsum.photos" alt="Ocean Waves">
+          <div class="caption">Ocean Waves</div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://picsum.photos" alt="Mountain Peak">
+          <div class="caption">Mountain Peak</div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://picsum.photos" alt="Forest Path">
+          <div class="caption">Forest Path</div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://picsum.photos" alt="City Skyline">
+          <div class="caption">City Skyline</div>
+        </div>
+
+        <div class="gallery-item">
+          <img src="https://picsum.photos" alt="Desert Dunes">
+          <div class="caption">Desert Dunes</div>
+        </div>
+
       </div>
-    </section>
+
 
     <!-- PROJECTS -->
     <section id="projects">
